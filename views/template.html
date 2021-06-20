@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family:'Playfair Display', serif;}
+.mySlides {display: none}
+</style>
+<body class="w3-content w3-border-left w3-border-right">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-blue w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
+    <h3>Lloguer</h3>
+    <h3>des de 49€</h3>
+    <h6>per nit</h6>
+    <hr>
+    <form action="/action_page.php" target="_blank">
+      <p><label><i class="fa fa-calendar-check-o"></i> Entrada</label></p>
+      <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>          
+      <p><label><i class="fa fa-calendar-o"></i> Sortida</label></p>
+      <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut" required>         
+      <p><label><i class="fa fa-male"></i> Adults</label></p>
+      <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">              
+      <p><label><i class="fa fa-child"></i> Nens</label></p>
+      <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+      <p><button class="w3-button w3-block w3-blue w3-left-align" type="submit"><i class="fa fa-search w3-margin-right"></i> Cerca disponibilitat</button></p>
+    </form>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#apartment" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-building"></i> Apartment</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-16" onclick="document.getElementById('subscribe').style.display='block'"><i class="fa fa-rss"></i> Subscriu-t'hi</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-envelope"></i> Contacte</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <span class="w3-bar-item">Lloguer</span>
+  <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-white" style="margin-left:260px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:80px"></div>
+
+  <!-- Slideshow Header -->
+  <div class="w3-container" id="apartment">
+    <h2 class="w3-text-blue">L'allotjament</h2>
+    <div class="w3-display-container mySlides">
+    <img src="/w3images/livingroom.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Sala d'estar</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="/w3images/diningroom.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Menjador</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="/w3images/bedroom.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Habitació</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="/w3images/livingroom2.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Habitació II</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/livingroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/diningroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/bedroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/w3images/livingroom2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
+    </div>
+  </div>
+
+  <div class="w3-container">
+    <h3 class="w3-text-blue"><strong>Apartament al cor de Barcelona</strong></h3>
+    <h4><strong>Descripció</strong></h4>
+    <p>La Casa Valeta està situada al cor de Barcelona, a 5 minuts a peu de la parada de metro de Diagonal i a 10 minuts a peu de la Sagrada Família de Gaudí. L'establiment ofereix allotjament amb aire condicionat i WiFi gratuïta.</p>
+    <p>La Casa Valeta està 
+        ubicada a 10 minuts a peu d'una gran varietat de botigues, bars animats i restaurants catalans i a 5 parades de metro de la platja de la Barceloneta. La plaça de Catalunya i el nucli antic són a menys de 20 minuts a peu i l'aeroport de Barcelona és a 15 km.</p>
+    <p>Acceptem: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+    <hr>
+    <h4><strong>Característiques</strong></h4>
+    <div class="w3-row w3-large">
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-money"></i> Preu per dia: 57€</p>
+        <p><i class="fa fa-fw fa-clock-o"></i> Entrada: després de les 3PM</p>
+        <p><i class="fa fa-fw fa-clock-o"></i> Sortida: fins a les 12PM</p>
+        <p><i class="fa fa-fw fa-bath"></i> Banys: 2</p>
+      </div>
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-home"></i> Habitacions: 2<br></p>
+        <p><i class="fa fa-fw fa-bed"></i> Llits habitació I: 1</p>
+        <p><i class="fa fa-fw fa-bed"></i> Llits habitació II: 2</p>
+        <p><i class="fa fa-fw fa-male"></i> Capacitat màxima: 4</p>
+      </div>
+    </div>
+    <hr>
+    
+    <h4><strong>Instal·lacions</strong></h4>
+    <div class="w3-row w3-large">
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-thermometer"></i> Aire acondicionat<label class="switch">
+            <input type="checkbox" checked>
+          </label></p>
+          <p><i class="fa fa-fw fa-fire"></i> Calefacció<label class="switch">
+            <input type="checkbox" unchecked>
+          </label></p>
+          <p><i class="fa fa-fw fa-wheelchair"></i> Edifici adaptat<label class="switch">
+            <input type="checkbox" unchecked>
+          </label></p>
+          <p><i class="fa fa-fw fa-shower"></i> Dutxa
+            <label class="switch">
+                <input type="checkbox" checked>
+              </label>
+            </p>
+      </div>
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-tv"></i> TV<label class="switch">
+            <input type="checkbox" checked>
+          </label></p>
+        <p><i class="fa fa-fw fa-cutlery"></i> Cuina<label class="switch">
+            <input type="checkbox" checked>
+          </label></p>
+        <p><i class="fa fa-fw fa-wifi"></i> WiFi<label class="switch">
+            <input type="checkbox" checked>
+          </label></p>
+      </div>
+    </div>
+    <hr>
+
+    <h4><strong>Ubicació</strong></h4>
+        <div class="w3-row w3-large">
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-map-marker"></i> Provincia: Barcelona</p>
+            <p><i class="fa fa-fw fa-map-pin"></i> Ciutat: Barcelona</p>
+            <p><i class="fa fa-fw fa-map"></i> Coordenades GPS: 41.39159, 2.16400</p>
+          </div>
+        </div>
+        <hr>
+    <h4><strong>Normes d'us</strong></h4>
+    
+    <p>Cal que informeu l'establiment de l'hora prevista d'arribada amb antelació. Podeu fer servir l'apartat de Peticions especials en fer la 			reserva o posar-vos en contacte amb l'establiment.</p>
+	<p>Un cop feta la reserva, rebrà un correu electrònic de la propietat amb instruccions de pagament i recollida de claus.</p>
+    <p>Subscriu-t'hi i t'enviarem les millors ofertes!</p>
+    <p><button class="w3-button w3-blue w3-third" onclick="document.getElementById('subscribe').style.display='block'">Subscriu-t'hi</button></p>
+  </div>
+  <hr>
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact">
+    <h2>Contacte</h2>
+    <i class="fa fa-map-marker" style="width:30px"></i> Barcelona, Catalonia<br>
+    <i class="fa fa-phone" style="width:30px"></i> Teléfon: +34 151515<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+    <p>Preguntes? Envia'ns una consulta:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Nom" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Missatge" required name="Message"></p>
+    <button type="submit" class="w3-button w3-blue w3-third">Enviar un missatge</button>
+    </form>
+  </div>
+  
+  <footer class="w3-container w3-padding-16" style="margin-top:32px">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></footer>
+
+<!-- End page content -->
+</div>
+
+<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom w3-padding-large">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-button w3-xlarge w3-right w3-transparent"></i>
+      <h2 class="w3-wide">SUBSCRIU T'HI</h2>
+      <p>T'enviarem les millors ofertes!</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscriu-t'hi</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Script to open and close sidebar when on tablets and phones
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Slideshow Apartment Images
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+
+</body>
+</html>
